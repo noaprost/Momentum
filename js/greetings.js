@@ -25,9 +25,9 @@ function showGreetingMessage(userName){
 const savedUserName = localStorage.getItem(USERNAME_KEY)
 
 if(savedUserName === null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME)
     loginForm.addEventListener("submit", onLoginSubmit)
 }else{
     showGreetingMessage(savedUserName)
-    loginForm.classList.add(HIDDEN_CLASSNAME)
 }
 
